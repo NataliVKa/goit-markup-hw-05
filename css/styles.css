@@ -597,35 +597,183 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:focus {
-  background-color: #31d0aa;
+  background-color: #28f8c7;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/**----------------------------------*/
+/**--------------BACKDROP---------------*/
+
 .backdrop {
-  width: 100%;
-  height: 100%;
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+/**----------------------------------*/
+/**--------------MODAL---------------*/
+
 .modal {
-  border-radius: 4px;
-  width: 408px;
-  min-height: 584px;
-  background-color: #fcfcfc;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
+  width: 408px;
+  min-height: 584px;
+  padding: 40px;
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .modal-close-btn {
-  margin-right: auto;
-  padding: 24px;
-  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
   border-radius: 4px;
-  width: 24px;
-  height: 24px;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 0;
+  fill: #2e2f42;
+  transition: stroke 250ms linear;
+
+  border-radius: 100%;
+
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: #fd9222;
+}
+
+/**----------------------------------*/
+/**--------------REVIEW FORM---------------*/
+
+.review-form-description {
+  max-width: 298px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 40px;
+}
+
+.review-form-field-wrapper {
+  margin-bottom: 8px;
+}
+
+.review-form-field-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.review-form-input-wrapper {
+  position: relative;
+}
+
+.review-form-input {
+  width: 100%;
+  height: 36.55px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 52px;
+  background-color: transparent;
+  transition: border-color 250ms linear;
+}
+
+.review-form-input:focus {
+  border-color: #4d5ae5;
+  outline: transparent;
+}
+
+.review-form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+}
+
+.review-form-input:focus + .review-form-field-icon {
+  stroke: #fd9222;
+}
+
+.review-form-massage {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  resize: none;
+  padding: 22px 24px;
+  transition: border-color 250ms linear;
+}
+
+.review-form-massage::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.review-form-massage:focus {
+  border-color: #4d5ae5;
+  outline: transparent;
+}
+
+.review-form-checkbox-wrapper {
+  margin-bottom: 40px;
+}
+
+.review-form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.review-form-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.review-form-privacy-checkbox:checked
+  + .review-form-checkbox-label
+  .review-form-own-checkbox {
+  background-color: #4d5ae5;
+}
+
+.review-form-privacy-checkbox:focus
+  + .review-form-checkbox-label
+  .review-form-own-checkbox {
+  outline: 2px solid #31d0aa;
+}
+
+.privacy-policy-link {
+  line-height: 1.3;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
 }
