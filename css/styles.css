@@ -697,10 +697,10 @@ img {
   min-height: 584px;
   border-radius: 4px;
   background: #fcfcfc;
-  padding: 72px 24px 24px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 
 .modal-close-btn {
@@ -713,6 +713,7 @@ img {
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -752,7 +753,7 @@ img {
 }
 
 .review-form-field-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .review-form-field-label {
@@ -767,11 +768,10 @@ img {
 
 .review-form-input-wrapper {
   position: relative;
-  margin-bottom: 16px;
 }
 
 .review-form-input {
-  width: 360px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -799,28 +799,33 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.review-form-massage {
+.review-form-textarea-wrapper {
+  margin-bottom: 16px;
+}
+
+.review-form-textarea {
+  width: 100%;
+  height: 120px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   font-weight: 400;
   color: rgba(46, 47, 66, 0.4);
-  width: 100%;
-  height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
+  padding: 8px 16px;
   outline: transparent;
   resize: none;
-  padding: 8px 16px;
+
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.review-form-massage::placeholder {
+.review-form-textarea::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
 
-.review-form-massage:focus {
+.review-form-textarea:focus {
   border-color: #4d5ae5;
   outline: transparent;
 }
@@ -879,23 +884,17 @@ img {
 
 .modal-send-btn {
   display: block;
-  position: absolute;
-  content: "";
-  right: 50%;
-  transform: translateX(50%);
+  margin: 0 auto;
   min-width: 169px;
   height: 56px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  background: #4d5ae5;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  font-family: "Roboto";
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  width: 105px;
-  color: #fff;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
